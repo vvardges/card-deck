@@ -52,5 +52,12 @@ const deck1 = new Deck();
 deck1.shuffle();
 
 for (let i = 1; i <= 53; i++) {
-    const card = deck1.deal_card().show();
+    const card = deck1.deal_card();
+    card.show();
 }
+
+document.getElementById("btn-shuffle").addEventListener("click", function(){
+    const deck2 = new Deck();
+    deck2.shuffle();
+    deck2.deal_card().show();
+});
